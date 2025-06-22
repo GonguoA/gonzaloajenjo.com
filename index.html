@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title> Gonzalo Ajenjo | Portafolio y Trabajos</title>
+        <link rel="icon" type="image/png" href="/logos/favicon.png">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon" sizes="192x192" href="/logos/icon-192.png" type="image/png">
+        <link rel="icon" sizes="512x512" href="/logos/icon-512.png" type="image/png">
+        <link rel="apple-touch-icon" href="/logos/icon-192.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portafolio de Gonzalo Ajenjo, incluyendo trabajos y proyectos en publicidad y creatividad.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!--
+        
+        PRECARGA de imágenes del proyecto ppop 
+        <link rel="prefetch" href="/publi/PPOP/PPOP.html" as="document">
+        
+        <script>
+            const ppopImages = [
+                "/publi/PPOP/Mesa1.gif",
+                "/publi/PPOP/Mesa2.jpg",
+            ];
+
+            // Preload para priorización
+            ppopImages.forEach(src => {
+                const link = document.createElement("link");
+                link.rel  = "preload";
+                link.as   = "image";
+                link.href = src;
+                document.head.appendChild(link);
+            });
+
+            // Precarga efectiva creando imágenes invisibles
+            ppopImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+
+            // Prefetch del HTML del proyecto
+            const ppopHtmlLink = document.createElement("link");
+            ppopHtmlLink.rel = "prefetch";
+            ppopHtmlLink.href = "/publi/PPOP/PPOP.html";
+            ppopHtmlLink.as = "document";
+            document.head.appendChild(ppopHtmlLink);
+
+        </script>
+        
+        
+             ANIMACION LOGO LOADING
+            <script>
+            // Mostrar loader inmediatamente al abrir
+            document.addEventListener("DOMContentLoaded", function () {
+            const preloader = document.getElementById("preloader");
+            // Empieza a ocultarlo a los 2s
+            setTimeout(() => {
+                preloader.style.opacity = "0";
+            preloader.style.pointerEvents = "none";
+                setTimeout(() => {
+                preloader.style.display = "none";
+                }, 500); // tiempo de fade-out
+            }, 2000); // tiempo visible del loader
+            }); 
+        </script>-->
+        
+
+    </head>
+    
+
+    <body>
+         <!-- ANIMACION LOGO LOADING 
+        <div id="preloader">
+            <img src="/logosvg.svg" alt="Cargando..." class="loader-logo">
+        </div>
+        -->
+
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/logos/Milogo.webp" alt="Logo de Gonzalo Ajenjo">
+                    </a>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/English/English.html" class="nav__link">ENGLISH</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link nav__des">TRABAJO</a>
+                        <ul class="nav__des__ul">
+                            <li class="nav__des__list__item"><a href="/publi/Publi.html">PUBLI</a></li>
+                            <li class="nav__des__list__item"><a href="/Disenografico/disenografico.html">DISEÑO GRÁFICO</a></li>                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/Sobre mi/Sobre mí.html" class="nav__link">SOBRE MÍ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/Contacto/Contacto.html" class="nav__link">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="centro">
+                <div class="title"> 
+                    <h1 class="title__texto">¡Hola!
+                        Soy Gonzalo Ajenjo.</h1>
+                </div>
+                <a href="Sobre mi/Sobre mí.html">
+                    <div class="mifoto">
+                        <img src="/Gon11.webp" alt="Gonzalo Ajenjo">
+                    </div>
+                </a>
+            </div>
+            
+        </main>
+        <footer>
+            <nav class="nav2">
+                <a href="../pato/Pato.html" class="nav__link">PATO?</a>
+            </nav>
+            </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const trabajoLink = document.querySelector(".nav__des");
+                const subMenu = document.querySelector(".nav__des__ul");
+        
+                trabajoLink.addEventListener("click", function (e) {
+                    e.preventDefault(); // Evita que el enlace recargue la página
+                    subMenu.classList.toggle("show");
+                });
+        
+                // Cierra el submenú si se hace clic fuera de él
+                document.addEventListener("click", function (e) {
+                    if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                        subMenu.classList.remove("show");
+                    }
+                });
+            });
+        </script>
+        <script>
+    // Animación de aparición para Gon11
+    document.addEventListener("DOMContentLoaded", function () {
+        const gon11Image = document.querySelector('.mifoto');
+        
+        // Activar la animación con un pequeño delay
+        setTimeout(function() {
+            gon11Image.classList.add('show');
+        }, 100);
+        
+        // Código existente del menú desplegable
+        const trabajoLink = document.querySelector(".nav__des");
+        const subMenu = document.querySelector(".nav__des__ul");
+
+        trabajoLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            subMenu.classList.toggle("show");
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                subMenu.classList.remove("show");
+            }
+        });
+    });
+    </script>
+    </body>
+</html>

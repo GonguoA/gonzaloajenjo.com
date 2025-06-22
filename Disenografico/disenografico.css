@@ -1,0 +1,337 @@
+body{
+    font-family: Montserrat, Arial, sans-serif, Helvetica;
+    background-color: #fcc53a;
+    margin: 0;
+}
+.nav{
+    border: none;
+    border-bottom: 2px solid black; 
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: end;
+    z-index: 10;
+
+
+
+}
+
+
+.nav__list{
+    margin: 0;
+    text-align: right;
+
+
+
+}
+.nav__item{
+    display: inline-block;
+    padding: 10px;
+
+    
+}
+
+.nav__link{
+    color: black;;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px
+    
+}
+.nav__link:hover{
+    background-color:#fffdf3;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav__des:hover + .nav__des__ul {
+    display: block; /* Muestra el submenú al hacer hover */
+}
+.nav__des__ul{
+    display: none;
+    position: fixed;
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 0;
+    z-index: 11;
+}
+
+.nav__des__ul:hover{
+    display: block;
+    transition: background-color 0.3s ease;
+}
+.nav__des__list__item{
+    margin-top: 25px;
+}
+.nav__des__list__item > a{
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;;
+    border-radius: 20px;
+    padding: 8px;
+    background: #fcc53a;
+}
+
+.nav__des__list__item >a:hover {
+    background-color:#fffdf3;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+.nav__des__list__item >a:focus {
+    background-color:#fffdf3;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+.nav__des__ul.show {
+    display: block;
+}
+.title{
+    color:#fffdf3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 200px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1{
+    font-size: 4vw;
+    font-weight: 700;
+    text-align: center;
+    margin:0 auto;
+    max-width: none;
+    text-wrap:balance;
+
+}
+
+.logo{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: auto;
+    margin-bottom: 20PX;
+    padding-bottom: 20PX;
+}
+
+
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin-top: 7%;
+    z-index: 5;
+}
+
+.gallery--item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery--item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+}
+
+
+.gallery--item img:hover {
+    border-radius: 20px;
+    transform: scale(0.97); 
+    transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+}
+
+/* Animaciones de scroll para gallery-item */
+.gallery-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 1650px) {
+    .gallery{
+        margin-top:  100px
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .gallery{
+        margin-top: 12%
+    }
+}
+@media only screen and (max-width: 920px) {
+    .gallery{
+        margin-top: 14%
+    }
+}
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        margin-top: 13%
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px; 
+        line-height: 1.2; 
+        padding: 10px;
+        max-width: 90%; 
+    }
+    .nav {
+        padding: 10px; /* Reducir el padding */
+        margin-right: 20px; /* Reducir el margen derecho */
+        margin-left: 20px; /* Reducir el margen izquierdo */
+    }
+
+    .nav__list {
+        font-size: 12px; /* Reducir el tamaño de fuente */
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .nav__item {
+        padding: 5px; /* Reducir el padding */
+    }
+
+    .nav__link {
+        padding: 5px; /* Reducir el padding */
+        font-size: 12px; /* Reducir el tamaño de fuente */
+    }
+    .title {
+        position: relative; /* Hacer que la posición sea relativa para el título */
+    }
+
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 0px; /* Ajustar la posición vertical del logo */
+        width: 150px; /* Tamaño del logo para pantallas más pequeñas */
+    }
+    .nav__link:hover{
+        padding: 5px;
+        font-size: 12px;
+        }
+    .nav__des__list__item {
+        font-size: 12px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 12px;
+    }
+    .nav__des__list__item > a{
+        padding: 5px;
+    }
+    .nav__des__list__item{
+        margin-top: 18px;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 0px; /* Ajustar la posición vertical del logo */
+        width: 150px; /* Tamaño del logo para pantallas más pequeñas */
+    }
+    
+}
+
+@media only screen and (max-width: 510px) {
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 80px; /* Ajustar la posición vertical del logo */
+        width: 150px; /* Tamaño del logo para pantallas más pequeñas */
+        left: calc(50% - 75px);
+    }
+    .nav{
+        justify-content: center;
+    }
+    .nav2{
+        justify-content: center;
+    }
+    .gallery{
+    margin-top: 20px
+    }
+}
+
+@media only screen and (max-width: 390px) {
+
+    h1 {
+        font-size: 30px; 
+        line-height: 1.2; 
+        padding: 10px;
+        max-width: 90%; 
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 427px) {
+    .nav__link {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+    .nav__link:hover{
+    padding: 5px;
+    font-size: 10px;
+    }
+    .nav__des__list__item {
+        font-size: 10px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 385px) {
+    .nav__link {
+        font-size: 9px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+    .nav__link:hover{
+    padding: 5px;
+    font-size: 9px;
+    }
+    .nav__des__list__item {
+        font-size: 9px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 9px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+  .nav__link {
+    font-weight: 500 !important;
+  }
+}

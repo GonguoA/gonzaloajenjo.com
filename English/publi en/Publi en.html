@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/English/publi en/stylespublien.css">
+        <title> Gonzalo Ajenjo | Portfolio and creative works</title>
+        <link rel="icon" type="image/x-icon" href="/logos/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Gonzalo Ajenjo's portfolio, which includes creative advertising works and ideas.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/English/English.html">
+                    <img src="/logos/Milogo2.webp"  alt="Gonzalo Ajenjo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/publi/Publi.html" class="nav__link">SPANISH</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link nav__des">WORK</a>
+                        <ul class="nav__des__ul">
+                            <li class="nav__des__list__item"><a href="/English/publi en/Publi en.html">ADVERTISING</a></li>
+                            <li class="nav__des__list__item"><a href="/English/GraphicDesign/disenografico en.html">GRAPHIC DESIGN</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/English/About/About.html" class="nav__link">ABOUT ME</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/English/Contact/Contact.html" class="nav__link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--<div class="realntitle">
+                    <div class="title">
+                        <h2> Real campaigns have not been translated </h2>
+                    </div>
+                    <div class="realgallery">
+                        <div class="realgallery--container">
+                            <div class="realgallery--item"><a href="/publi/PPOP/ppop.html"><img src="/Portadas/PORTADAS-17.png" alt="Imagen 5"></a></div>
+                            <div class="realgallery--item"><a href="/publi/SER/ser.html"><img src="/Portadas/PORTADAS-18.png" alt="Imagen 6"></a></div>
+                        </div>
+                    </div>
+                </div>-->
+            <div class="gallery">
+                
+                <div class="taggallery">
+                    <div class="taggallery--item gallery-item"><a href="/English/publi en/SWIFT en/SWIFTen.html"><img src="/Portadas/en/Nuevas Portadas-05.webp" alt="Imagen 2"></a></div>
+                    <div class="taggallery--item gallery-item"><a href="/publi/PPOP/ppop.html"><img src="/Portadas/PORTADAS-17.webp" alt="Imagen 2"></a></div>
+                    <div class="taggallery--item gallery-item"><a href="/publi/SER/ser.html"><img src="/Portadas/PORTADAS-18.webp" alt="Imagen 2"></a></div>
+                    <div class="taggallery--item gallery-item"><a href="/English/publi en/Resacodes en/Resacodes.html"><img src="/Portadas/en/Nuevas Portadas-02.webp" alt="Imagen 2"></a></div>
+                    <div class="taggallery--item gallery-item"><a href="/English/publi en/Power coolin en/Powercoolin.html"><img src="/Portadas/en/Nuevas Portadas-03.webp" alt="Imagen 3"></a></div>
+                    <div class="taggallery--item gallery-item"><a href="/English/publi en/Cerezo en/Cerezo.html"><img src="/Portadas/en/Nuevas Portadas-01.webp" alt="Imagen 1"></a></div>
+                    <div class="taggallery--item gallery-item"><a href="/English/publi en/FIESTA en/FIESTA.html"><img src="/Portadas/en/Nuevas Portadas-04.webp" alt="Imagen 4"></a></div>
+                </div>
+            </div>
+        </main>
+        <script>
+            // Menú desplegable
+            document.addEventListener("DOMContentLoaded", function () {
+                const trabajoLink = document.querySelector(".nav__des");
+                const subMenu = document.querySelector(".nav__des__ul");
+        
+                trabajoLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    subMenu.classList.toggle("show");
+                });
+        
+                document.addEventListener("click", function (e) {
+                    if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                        subMenu.classList.remove("show");
+                    }
+                });
+            });
+
+            // Animaciones de scroll
+            function checkScroll() {
+                const items = document.querySelectorAll('.gallery-item');
+                const windowHeight = window.innerHeight;
+                
+                items.forEach(function(item, index) {
+                    const elementTop = item.getBoundingClientRect().top;
+                    
+                    if (elementTop < windowHeight - 50) {
+                        setTimeout(function() {
+                            item.classList.add('show');
+                        }, index * 10);
+                    }
+                });
+            }
+
+            // Ejecutar al cargar la página
+            window.addEventListener('load', checkScroll);
+            
+            // Ejecutar al hacer scroll
+            window.addEventListener('scroll', checkScroll);
+        </script>
+        
+    </body>
+
+
+</html>

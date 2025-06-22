@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="stylescerezo.css">
+    <title> Cerezo Sanders | Gonzalo Ajenjo</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/logos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <a href="/English/English.html">
+            <img src="/logos/Milogo4.webp"  alt="Gonzalo Ajenjo">
+        </a>
+    </div> 
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="/publi/Cerezo/Cerezo.html" class="nav__link">SPANISH</a>
+            </li>
+            <li class="nav__item">
+                <a href="" class="nav__link nav__des">WORK</a>
+                <ul class="nav__des__ul">
+                    <li class="nav__des__list__item"><a href="/English/publi en/Publi en.html">ADVERTISING</a></li>
+                    <li class="nav__des__list__item"><a href="/English/GraphicDesign/disenografico en.html">GRAPHIC DESIGN</a></li>
+                </ul>
+            </li>
+            <li class="nav__item">
+                <a href="/English/About/About.html" class="nav__link">ABOUT ME</a>
+            </li>
+            <li class="nav__item">
+                <a href="/English/Contact/Contact.html" class="nav__link">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="cerezo">
+        <img class="cerezo--gifs" src="GIF 1.gif" alt="gif1">
+        <img class="cerezo--gifs"src="GIF 2.gif" alt="gif1">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/932454069?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Apoyo Fraternal EN"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <img class="cerezo--gifs"src="GIF 3.gif" alt="gif1">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trabajoLink = document.querySelector(".nav__des");
+            const subMenu = document.querySelector(".nav__des__ul");
+    
+            trabajoLink.addEventListener("click", function (e) {
+                e.preventDefault(); // Evita que el enlace recargue la página
+                subMenu.classList.toggle("show");
+            });
+    
+            // Cierra el submenú si se hace clic fuera de él
+            document.addEventListener("click", function (e) {
+                if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                    subMenu.classList.remove("show");
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

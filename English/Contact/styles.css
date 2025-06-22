@@ -1,0 +1,637 @@
+body{
+    font-family: Montserrat, Arial, sans-serif, Helvetica;
+    background-color: #fffdf3;
+    margin: 0;
+}
+p, h1, h2{
+    text-wrap:pretty;
+}
+/* barra de navegación*/
+header{
+    z-index: 9999;
+}
+.nav{
+    border: none;
+    border-bottom: 2px solid #fcc53a ;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: end;
+    z-index: 10;
+}
+
+.nav__list{
+    margin: 0;
+    text-align: right;
+}
+.nav__item{
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav__link{
+    color: #fcc53a;
+    text-decoration: none;
+    border: 2px solid #fcc53a;
+    border-radius: 20px;
+    padding: 8px
+    
+}
+.nav__link:hover{
+    background-color:#fcc53a;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav__des:hover + .nav__des__ul {
+    display: block; /* Muestra el submenú al hacer hover */
+}
+.nav__des__ul{
+    display: none;
+    position: fixed;
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 0;
+    z-index: 11;
+}
+
+.nav__des__ul:hover{
+    display: block;
+}
+.nav__des__list__item{
+    margin-top: 25px;
+}
+.nav__des__list__item > a{
+    color: #fcc53a;
+    text-decoration: none;
+    border: 2px solid #fcc53a;
+    border-radius: 20px;
+    padding: 8px;
+    background: #fffdf3;
+}
+
+.nav__des__list__item >a:hover {
+    background-color:#fcc53a;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+.nav__des__ul.show {
+    display: block;
+}
+main {
+    margin-bottom: 40px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fffdf3;
+    padding-top: 5px;
+}
+
+.nav2{
+    border: none;
+    border-top: 2px solid #fcc53a ;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: end;
+    /* position: fixed;
+    bottom: 0; */
+    /* margin-top: auto; */
+    width: calc(100% - 100px);
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: auto;
+}
+
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* MAIN*/
+
+main {
+    padding-bottom: 90px;
+}
+
+.title{
+
+    display: block;
+    justify-content: left;
+    align-items: left;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 10%;
+    position: relative;
+    z-index: 5;
+}
+.title__texto {
+    display: block;
+    text-align: left;
+}
+.title__texto2 {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+}
+h1{
+    font-size: 2vw;
+    font-weight: 700;
+    text-align: left;
+    margin:0;
+    max-width: none;
+}
+h2{
+    font-size: 1vw;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.datos__list {
+    display: grid;
+    grid-template-columns: repeat(1, 6fr); 
+    list-style-type: none;
+    padding: none;
+    padding-left: 5%;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.datos__item {
+    padding: 0px;
+    padding-right: 30px;
+}
+
+.whatsapp-link {
+    color: #25D366; /* WhatsApp green */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+    color: #128C7E; /* Darker WhatsApp green */
+}
+
+.linkedin-link {
+    color: #0e76a8; /* LinkedIn blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.linkedin-link:hover {
+    text-decoration: underline;
+    color: #005582; /* Darker LinkedIn blue */
+}
+
+.email-link {
+    color: #3366cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+/*
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus{
+
+    border-radius: 20px; 
+}
+
+form textarea {
+    border-radius: 20px; 
+}
+form textarea:focus {
+    outline: none;
+    border: 2px solid #fcc53a; 
+
+}
+
+form input[type="submit"] {
+    background-color: #fcc53a;
+    color: black;
+    padding: 6px 16px;
+    border: 2px solid black;
+    border-radius: 100px;
+    font-weight:400;
+    width: fit-content;
+    align-self: flex-start; 
+    cursor: pointer;
+    font-family: inherit;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+form input[type="submit"]:hover {
+    color: #fcc53a;
+    background-color: #fffdf3;
+    text-decoration: none;
+    border: 2px solid #fcc53a;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-title {
+    font-size: 2vw;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+*/
+/* Contenedor general del formulario */
+form {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título del formulario */
+.contact-form-title {
+    font-size: 2vw;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+/* Etiquetas */
+form label {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-family: inherit;
+}
+
+/* Campos de texto y área de mensaje */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* Borde más redondeado al enfocar input */
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid #fcc53a;
+}
+
+/* Estilo del textarea */
+form textarea {
+    border-radius: 20px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+form textarea:focus {
+    outline: none;
+    border: 2px solid #fcc53a;
+}
+
+form button[type="submit"] {
+    background-color: #fcc53a;
+    color: black;
+    padding: 6px 16px;
+    border: 2px solid black;
+    border-radius: 100px;
+    font-weight: 400;
+    width: fit-content;
+    align-self: flex-start;
+    cursor: pointer;
+    font-family: inherit;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    color: #fcc53a;
+    background-color: #fffdf3;
+    border: 2px solid #fcc53a;
+    transition: background-color 0.3s ease;
+}
+
+.datos__item h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1640px) {
+    .contact-form-title {
+        font-size: 2.7vw;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .contact-form-title {
+        font-size: 4vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .contact-form-title {
+        font-size: 5vw;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .contact-form-title {
+        font-size: 6vw;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .contact-form-title {
+        font-size: 30px;
+        line-height: 1.2;
+        padding: 10px;
+        max-width: 90%;
+        margin-top: 30px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1700px) {
+    .logo {
+        position: absolute; 
+        top: 0px; 
+        width: 150px; 
+    }
+
+}
+@media only screen and (max-width: 1640px) {
+
+    
+    h1{
+        font-size: 2.7vw;
+    }
+    h2{
+        font-size: 1.7vw;
+    }
+
+}
+@media only screen and (max-width: 1040px) {
+
+    
+    h1{
+        font-size: 4vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav {
+        padding: 15px; 
+        margin-right: 20px; 
+        margin-left: 20px; 
+    }
+
+    .nav__list {
+        font-size: 14px; 
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .nav__item {
+        padding: 5px; 
+    }
+
+    .nav__link {
+        padding: 5px; 
+        font-size: 12px; 
+    }
+    .title {
+        position: relative; 
+        padding-top:7%;
+    }
+
+    .logo {
+        position: absolute; 
+        top: 0px; 
+        width: 100px; 
+    }
+    .atributo__list {
+        grid-template-columns: repeat(2, 3fr);
+        gap: 0px; 
+    }
+    .atributo__item {
+        padding: 10px;
+        font-size: 0.9em;
+        
+    }
+    .nav__link:hover{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .nav__des__list__item {
+        font-size: 12px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 12px;
+    }
+    .nav__des__list__item > a{
+        padding: 6px;
+    }
+    .nav__des__list__item{
+        margin-top: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .title{
+        padding-top: 10%;;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    h2{
+        font-size: 4vw;
+    }
+
+}
+
+
+@media only screen and (max-width: 510px) {
+
+    .nav{
+        justify-content: center;
+    }
+    .nav2{ 
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .atributo__list {
+        grid-template-columns: repeat(1,6fr);
+    }
+    h1{
+        font-size: 6vw;
+    }
+    h2{
+        font-size: 5vw;
+    }
+    .logo{
+        top:80px;
+        left: 4%;
+        width: 150px;
+    }
+    .title{
+        margin-top: 150px
+    }
+}
+
+@media only screen and (max-width: 390px) {
+
+    h1 {
+        font-size: 30px; 
+        line-height: 1.2; 
+        padding: 10px;
+        max-width: 90%; 
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .nav__link {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+    .nav__link:hover{
+    padding: 5px;
+    font-size: 10px;
+    
+    }
+    .nav__des__list__item {
+        font-size: 10px;
+    }
+    .nav__des__list__item >a:hover {
+
+        font-size: 10px;
+    }
+    .nav__des__list__item {
+        font-size: 12px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 12px;
+    }
+    .nav__des__list__item > a{
+        padding: 5px;
+    }
+
+}
+@media only screen and (max-width: 380px) {
+    .nav__link {
+        font-size: 9px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+    .nav__link:hover{
+    padding: 5px;
+    font-size: 9px;
+    }
+    .nav__des__list__item {
+        font-size: 9px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 9px;
+    }
+    .nav__des__list__item > a{
+        padding: 5px;
+    }
+}
+
+/* --- Botón estilo MAIVU para etiquetas de contacto --- */
+.maivu-title {
+    display: inline-block;
+    background: #fffdf3;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid black;
+    margin-bottom: 8px;
+    margin-right: 12px;
+    margin-top: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.maivu-title:hover {
+    background: #fcc53a;
+    color: black;
+    border: 2px solid #fcc53a;
+}
+
+
+
+@media (max-width: 600px) {
+  .nav__link {
+    font-weight: 500 !important;
+  }
+}

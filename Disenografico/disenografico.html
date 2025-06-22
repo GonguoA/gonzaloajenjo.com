@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/Disenografico/disenografico.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diseño gráfico | Gonzalo Ajenjo</title>
+        <link rel="icon" type="image/x-icon" href="/logos/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="/logos/Milogo2.webp"  alt="Gonzalo Ajenjo">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/English/GraphicDesign/disenografico en.html" class="nav__link">ENGLISH</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__link nav__des">TRABAJO</a>
+                        <ul class="nav__des__ul">
+                            <li class="nav__des__list__item"><a href="/publi/Publi.html">PUBLI</a></li>
+                            <li class="nav__des__list__item"><a href="/Disenografico/disenografico.html">DISEÑO GRÁFICO</a></li>                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/Sobre mi/Sobre mí.html" class="nav__link">SOBRE MÍ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/Contacto/Contacto.html" class="nav__link">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="gallery">
+                <div class="gallery--item gallery-item"><a href="/Disenografico/MAI VU/MAIVU.html"><img src="/Disenografico/Logofolio/Logo_15.png" alt="Imagen 2"></a></div>
+                <div class="gallery--item gallery-item"><a href="/publi/PPOP/ppop.html"><img src="/Disenografico/Logofolio/Logo_2.png" alt="Imagen 2"></a></div>
+                <div class="gallery--item gallery-item"><a href="/publi/SER/ser.html"><img src="/Disenografico/Logofolio/Logo_13.png" alt="Imagen 3"></a></div>
+                <div class="gallery--item gallery-item"><a href="/Disenografico/TACOTORNADO/Tacotornado.html"><img src="/Disenografico/Logofolio/Logo_14.png" alt="Imagen 4"></a></div>
+                <div class="gallery--item gallery-item"><a href="/Disenografico/Logofolio/logofolio.html"><img src="/Disenografico/Logofolio/Logo_1.png" alt="Imagen 1"></a></div>
+                <div class="gallery--item gallery-item"><a href="/Disenografico/ACELPILAR/acelpilar.html"><img src="/Disenografico/Logofolio/Logo_5.png" alt="Imagen 5"></a></div>
+                <div class="gallery--item gallery-item"><a href="/Disenografico/COOA/cooa.html"><img src="/Disenografico/Logofolio/Logo_4.png" alt="Imagen 6"></a></div>
+                
+            </div>
+        </main>
+        <script>
+            // Menú desplegable
+            document.addEventListener("DOMContentLoaded", function () {
+                const trabajoLink = document.querySelector(".nav__des");
+                const subMenu = document.querySelector(".nav__des__ul");
+        
+                trabajoLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    subMenu.classList.toggle("show");
+                });
+        
+                document.addEventListener("click", function (e) {
+                    if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                        subMenu.classList.remove("show");
+                    }
+                });
+            });
+
+            // Animaciones de scroll
+            function checkScroll() {
+                const items = document.querySelectorAll('.gallery-item');
+                const windowHeight = window.innerHeight;
+                
+                items.forEach(function(item, index) {
+                    const elementTop = item.getBoundingClientRect().top;
+                    
+                    if (elementTop < windowHeight - 50) {
+                        setTimeout(function() {
+                            item.classList.add('show');
+                        }, index * 10);
+                    }
+                });
+            }
+
+            // Ejecutar al cargar la página
+            window.addEventListener('load', checkScroll);
+            
+            // Ejecutar al hacer scroll
+            window.addEventListener('scroll', checkScroll);
+        </script>
+    </body>
+</html>

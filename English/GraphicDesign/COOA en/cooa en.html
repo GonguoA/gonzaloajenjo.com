@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/English/GraphicDesign/COOA en/cooa en.css">
+    <title>COOA | Gonzalo Ajenjo</title>
+    <link rel="icon" type="image/x-icon" href="/logos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/logos/Mi logo15.webp"  alt="Gonzalo Ajenjo">
+            </a>
+        </div> 
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/English/Logofolio en/logofolio.html" class="nav__link">ENGLISH</a>
+                </li>
+                <li class="nav__item">
+                    <a href="" class="nav__link nav__des">TRABAJO</a>
+                    <ul class="nav__des__ul">
+                        <li class="nav__des__list__item"><a href="/publi/Publi.html">PUBLI</a></li>
+                        <li class="nav__des__list__item"><a href="/Disenografico/disenografico.html">DISEÑO GRÁFICO</a></li>                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="/Sobre mi/Sobre mí.html"class="nav__link">SOBRE MÍ</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/Contacto/Contacto.html"class="nav__link">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="diapositivas">
+            <img class="diapositivas--img" src="COOA1.jpg" alt="logo1">
+            <img class="diapositivas--img" src="COOA2.jpg" alt="logo2">
+            <img class="diapositivas--img" src="COOA3.jpg" alt="logo3">
+            <img class="diapositivas--img" src="COOA4.jpg" alt="logo4">
+            <img class="diapositivas--img" src="COOA5.jpg" alt="logo5">
+            <img class="diapositivas--img" src="COOA6.jpg" alt="logo6">
+            <img class="diapositivas--img" src="COOA7.jpg" alt="logo7">
+            <img class="diapositivas--img" src="COOA8.jpg" alt="logo8">
+            <img class="diapositivas--img" src="COOA9.jpg" alt="logo9">
+            <img class="diapositivas--img" src="COOA10.jpg" alt="logo10">
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trabajoLink = document.querySelector(".nav__des");
+            const subMenu = document.querySelector(".nav__des__ul");
+    
+            trabajoLink.addEventListener("click", function (e) {
+                e.preventDefault(); // Evita que el enlace recargue la página
+                subMenu.classList.toggle("show");
+            });
+    
+            // Cierra el submenú si se hace clic fuera de él
+            document.addEventListener("click", function (e) {
+                if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                    subMenu.classList.remove("show");
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

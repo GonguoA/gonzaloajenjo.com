@@ -1,0 +1,1011 @@
+/* =======================
+   ESTILOS BASE (SIN MEDIA QUERIES)
+   ======================= */
+body{
+    font-family: Montserrat, Arial, sans-serif, Helvetica;
+    background-color: black;         /* From Contacto */
+    color: #fffdf3;                 /* From Contacto */
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+p, h1, h2{
+    text-wrap:pretty;
+}
+/* barra de navegación*/
+header{
+    z-index: 9999;
+}
+.nav{
+    border: none;
+    border-bottom: 2px solid #fcc53a ;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: end;
+    z-index: 10;
+}
+
+.nav__list{
+    margin: 0;
+    text-align: right;
+}
+.nav__item{
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav__link{
+    color: #fcc53a;
+    text-decoration: none;
+    border: 2px solid #fcc53a;
+    border-radius: 20px;
+    padding: 8px
+}
+.nav__link:hover{
+    background-color:#fcc53a;
+    color: black;
+    border: 2px solid #fcc53a;
+    transition: background-color 0.3s ease;
+}
+
+.nav__des:hover + .nav__des__ul {
+    display: block; /* Muestra el submenú al hacer hover */
+}
+.nav__des__ul{
+    display: none;
+    position: fixed;
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 0;
+    z-index: 11;
+}
+
+.nav__des__ul:hover{
+    display: block;
+}
+.nav__des__list__item{
+    margin-top: 25px;
+}
+.nav__des__list__item > a{
+    color: #fcc53a;
+    text-decoration: none;
+    border: 2px solid #fcc53a;
+    border-radius: 20px;
+    padding: 8px;
+    background: #fffdf3;
+}
+
+.nav__des__list__item >a:hover {
+    background-color:#fcc53a;
+    color: black;
+    border: 2px solid #fcc53a;
+    transition: background-color 0.3s ease;
+}
+.nav__des__ul.show {
+    display: block;
+}
+main {
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;         /* From Contacto */
+    color: #fffdf3;
+    padding-top: 5px;
+}
+
+.nav2{
+    border: none;
+    border-top: 2px solid #fcc53a ;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: end;
+    /* position: fixed;
+    bottom: 0; */
+    /* margin-top: auto; */
+    width: calc(100% - 100px);
+    box-sizing: border-box;
+}
+
+.logo{
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: auto;
+}
+
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.maivu-main {
+    max-width: 1150px;      /* Antes: 900px */
+    margin: 40px auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #fffdf3;                  /* Set main text to off-white */
+    padding-left: 0px;      /* Antes: 10px */
+    padding-right: 0px;     /* Antes: 10px */
+    box-sizing: border-box;
+}
+.maivu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    
+}
+.maivu-title {
+    display: inline-block;
+    background: black;
+    color: #fffdf3;
+    font-size: 1.5rem;
+    font-weight: 500;            /* Un poco más alto */
+    padding: 12px 22px; /* Aumenta el padding horizontal */
+    border-radius: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 16px;
+    border: 2px solid #fffdf3;
+}
+
+.maivu-info {
+    display: flex;
+    gap: 32px;
+    font-size: 0.95rem;
+}
+.maivu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.maivu-img1 {
+    grid-column: 1 / 3;
+    height: 220px;
+}
+.desc1 {
+    grid-column: 1 / 3;
+}
+.maivu-img2 {
+    grid-column: 1 / 2;
+    height: 220px;
+}
+.maivu-img3 {
+    grid-column: 2 / 3;
+    height: 220px;
+}
+.desc2 {
+    grid-column: 1 / 3;
+}
+.maivu-img4 {
+    grid-column: 1 / 3;
+    height: 320px; /* Aumenta la altura aquí (antes 220px) */
+}
+
+/* New bottom grid matching reference layout */
+.maivu-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+      margin-bottom: 24px;
+}
+
+.maivu-img5 {
+    grid-column: 1 / 2;
+    height: 220px;
+}
+
+.maivu-img6 {
+    grid-column: 2 / 3;
+    height: 220px;
+}
+
+.desc3 {
+    grid-column: 1 / 3;
+}
+
+.maivu-img-container {
+    background: #133c2b;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.maivu-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.maivu-description {
+    font-size: 1rem;
+    color: #fffdf3;
+    margin: 0;
+}
+
+/* Grupo para título y botón */
+.maivu-title-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+    height: auto; /* Permite que ambos se ajusten al contenido */
+}
+
+.maivu-title,
+.maivu-manual-btn {
+    display: flex;
+    align-items: center;
+    height: 45px;         /* Misma altura para ambos */
+    padding:  20px;      /* Mismo padding horizontal */
+    font-size: 1.3rem;    /* Mismo tamaño de fuente */
+    border-radius: 24px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;     /* Elimina margen inferior del título */
+    box-sizing: border-box;
+}
+
+
+
+.maivu-manual-btn {
+    background: #fcc53a;
+    color: black;
+    font-weight: 500;
+    border: 2px solid black;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.maivu-manual-btn:hover {
+    background: black;
+    color: #fcc53a;
+    border: 2px solid #fcc53a;
+    transition: background-color 0.3s ease;
+}
+
+.maivu-manual-bottom {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 120px 0;
+}
+
+/* Botón de abajo: igual que el de arriba pero solo afecta a este */
+.maivu-manual-btn-bottom {
+    background: #fcc53a;
+    color: black;
+    font-weight: 500;
+    border: 2px solid black;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    padding: 20px;
+    font-size: 1.3rem;
+    border-radius: 24px;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+}
+
+.maivu-manual-btn-bottom:hover {
+    background: black;
+    color: #fcc53a;
+    border: 2px solid #fcc53a;
+    transition: background-color 0.3s ease;
+}
+
+.maivu-block-title h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #fffdf3;
+}
+
+.maivu-block-text p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Layout para título a la izquierda y texto a la derecha */
+.maivu-block-content {
+    display: grid;
+    grid-template-columns: 28% 72%;
+    align-items: start;
+    gap: 24px;
+}
+
+.maivu-block-title {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start; /* Alinea a la izquierda */
+    text-align: left;
+    padding-right: 12px;
+}
+
+.maivu-block-title h3 {
+    margin: 0;
+    font-size: 2.1rem; /* Más grande */
+    color: #fffdf3;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.maivu-block-text {
+    grid-column: 2 / 3;
+    align-self: start;
+}
+.maivu-description {
+    width: 97%;
+}
+/* Galería vertical de 4 imágenes */
+.maivu-vertical-gallery {
+    display: flex;
+    width: 100%;
+    gap: 12px; /* Menos separación entre imágenes (antes 24px) */
+    justify-content: center;
+}
+
+.maivu-vertical-img {
+    flex: 1 1 0;
+    max-width: 25%; /* Cada imagen ocupa más espacio */
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.maivu-vertical-img img {
+    width: 100%;
+    height: auto;           /* Permite que la altura se ajuste automáticamente */
+    aspect-ratio: 3/4;      /* Cambia este valor si tus imágenes son, por ejemplo, 2:3 o 4:5 */
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    background: #eee;
+}
+/* Más espacio debajo de la galería de 4 fotos verticales */
+.maivu-vertical-gallery {
+    margin-bottom: 30px; /* Ajusta el valor a tu gusto */
+}
+
+.manual-icon {
+    margin-left: 10px; /* Ajusta el valor según el espacio que desees */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.maivu-img9 {
+    margin-bottom: 20px; /* Ajusta el valor según el espacio que desees */
+}
+
+/* Testimonial block styles */
+.testimonial-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    /* background: #fffbe7; */ /* Quita el fondo */
+    background: none;           /* Fondo transparente */
+    border-radius: 24px;
+    padding: 28px 24px;
+    box-shadow: none;           /* Quita la sombra */
+    margin-bottom: 32px;
+}
+.testimonial-photo {
+    flex: 0 0 90px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #fcc53a;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonial-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.testimonial-content {
+    flex: 1;
+}
+.testimonial-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #fcc53a;
+}
+.testimonial-content blockquote {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    color: #fffdf3;
+    border-left: 4px solid #fcc53a;
+    padding-left: 16px;
+    background: none;
+}
+.testimonial-content blockquote footer {
+    margin-top: 12px;
+    font-style: normal;
+    color: #fcc53a;
+    font-size: 0.98em;
+}
+
+/* Animación de aparición al hacer scroll */
+.maivu-anim {
+    opacity: 0;
+    transform: translateY(120px); /* Más desplazamiento para que el slide sea más notorio */
+    transition: 
+        opacity 0.5s cubic-bezier(.7,0,.3,1), 
+        transform 0.7s cubic-bezier(.7,0,.3,1); /* Más rápido y con curva más agresiva */
+    will-change: opacity, transform;
+}
+
+.maivu-anim.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =======================
+   MEDIA QUERIES AGRUPADAS
+   ======================= */
+
+/* -------- 1700px -------- */
+@media only screen and (max-width: 1700px) {
+    .logo {
+        position: absolute; 
+        top: 0px; 
+        width: 150px; 
+    }
+}
+
+/* -------- 1640px -------- */
+@media only screen and (max-width: 1640px) {
+    h1{
+        font-size: 2.7vw;
+    }
+    h2{
+        font-size: 1.7vw;
+    }
+}
+
+/* -------- 1040px -------- */
+@media only screen and (max-width: 1040px) {
+    h1{
+        font-size: 4vw;
+    }
+    h2{
+        font-size: 3vw;
+    }
+}
+
+/* -------- 1024px -------- */
+@media only screen and (max-width: 1024px) {
+    .nav {
+        padding: 15px; 
+        margin-right: 20px; 
+        margin-left: 20px; 
+    }
+    .nav__list {
+        font-size: 14px; 
+        text-align: center;
+        padding-left: 0px;
+    }
+    .nav__item {
+        padding: 5px; 
+    }
+    .nav__link {
+        padding: 5px; 
+        font-size: 12px; 
+    }
+    .title {
+        position: relative; 
+        padding-top:7%;
+    }
+    .logo {
+        position: absolute; 
+        top: 0px; 
+        width: 100px; 
+    }
+    .atributo__list {
+        grid-template-columns: repeat(2, 3fr);
+        gap: 0px; 
+    }
+    .atributo__item {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .nav__link:hover{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .nav__des__list__item {
+        font-size: 12px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 12px;
+    }
+    .nav__des__list__item > a{
+        padding: 6px;
+    }
+    .nav__des__list__item{
+        margin-top: 18px;
+    }
+}
+
+/* --------  870px -------- */
+@media (max-width: 870px) {
+    .maivu-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 0;
+        margin-bottom: 24px;
+    }
+    .maivu-title {
+        justify-self: start;
+        margin-bottom: 0;
+        margin-right: 0;
+        font-size: 1,5rem;
+        padding: 4px 12px;
+    }
+    .maivu-info {
+        flex-direction: column;
+        gap: 4px;
+        justify-self: end;
+        align-items: flex-end;
+        font-size: 0.95rem;
+    }
+    .maivu-info > div {
+        text-align: right;
+    }
+    .maivu-main {
+        margin: 20px 5px;
+    }
+    .maivu-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-end;
+    }
+    .maivu-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .maivu-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 16px;
+    }
+    .maivu-bottom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Keep two columns */
+        gap: 16px;
+    }
+    .maivu-img1,
+    .maivu-img2,
+    .maivu-img3,
+    .maivu-img4,
+    .desc1,
+    .desc2 {
+        grid-column: 1 / 2 !important;
+        height: auto;
+    }
+    .desc3 {
+        grid-column: 1 / 3 !important; /* Stretches desc3 under both images */
+        height: auto;
+    }
+    .maivu-img-container {
+        min-height: 160px;
+    }
+    main {
+        margin-top: 30px;
+    }
+    .maivu-img1 {
+        aspect-ratio: 16 / 6; /* menos panorámica, más zoom */
+        height: auto !important;
+        min-height: 140px;
+        max-height: 260px;
+        width: 100%;
+    }
+    .maivu-img1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        transform: scale(1.45); /* Aumenta el zoom, ajusta el valor si quieres más o menos */
+        transition: transform 0.3s, object-position 0.3s, aspect-ratio 0.3s;
+    }
+    /* Ensure maivu-bottom-grid stacks images on smaller screens */
+    .maivu-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        gap: 16px;
+    }
+    /* Correct the maivu-bottom-grid for side-by-side layout */
+    .maivu-bottom-grid {
+        grid-template-columns: 1fr 1fr; /* Keep two columns */
+        gap: 16px;
+    }
+    .maivu-img5,
+    .maivu-img6 {
+        grid-column: auto; /* Revert to automatic column placement */
+        width: 100%; /* Ensure they take 100% of their column */
+        max-width: 100%; /* Prevent overflow */
+    }
+    .desc3 {
+        grid-column: 1 / 3; /* Span the full width */
+    }
+    /* Adjust image properties for smaller screens */
+    .maivu-img5,
+    .maivu-img6 {
+        aspect-ratio: 16 / 6;
+        min-height: 100px; /* Adjust as needed */
+        max-height: 180px; /* Adjust as needed */
+    }
+    .maivu-img5 img,
+    .maivu-img6 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+    /* Reduce overall image size on smaller screens */
+    .maivu-img-container {
+        min-height: 120px; /* Reduced minimum height */
+    }
+    .maivu-img1,
+    .maivu-img2,
+    .maivu-img3,
+    .maivu-img4 {
+        height: auto; /* Adjust height automatically */
+        max-height: 220px; /* Limit maximum height */
+    }
+    .maivu-img1 img,
+    .maivu-img2 img,
+    .maivu-img3 img,
+    .maivu-img4 img {
+        object-fit: cover; /* Ensure images cover the container */
+        width: 100%; /* Take full width of the container */
+        height: 100%;
+    }
+    .maivu-title-group {
+        flex-direction: column;
+        align-items: stretch; /* Cambia a stretch para que ocupen todo el ancho */
+        gap: 10px;
+        width: 100%;
+        max-width: 130px; /* Opcional: limita el ancho máximo del grupo */
+    }
+    .maivu-title,
+    .maivu-manual-btn {
+        width: 100%;
+        min-width: 0;
+        justify-content: center; /* Centra el texto dentro del botón */
+        box-sizing: border-box;
+
+    }
+    .fa fa-download{
+        font-size: 0,1rem;
+    }
+    .btn-manual {
+        font-size: 0.5rem;
+    }
+    .maivu-manual-btn {
+        font-size: 1rem;
+    }
+}
+
+/* --------  700px -------- */
+@media (max-width: 700px) {
+    .maivu-block-content {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .maivu-block-title,
+    .maivu-block-text {
+        grid-column: 1 / 2;
+        text-align: left;
+        justify-content: flex-start;
+        padding-right: 0;
+    }
+    .maivu-block-title h3 {
+        font-size: 1.3rem;
+    }
+    .testimonial-block {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 8px;
+        gap: 12px;
+    }
+    .testimonial-photo {
+        width: 70px;
+        height: 70px;
+    }
+    .testimonial-content h3 {
+        font-size: 1.1rem;
+    }
+    .maivu-manual-btn-bottom {
+        font-size: 1rem;
+        padding: 12px 18px;
+        height: 38px;
+    }
+    .maivu-img4 {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        background: #133c2b; /* Mantén el fondo para el borde redondeado */
+    }
+    .maivu-img4 picture,
+    .maivu-img4 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;      /* Asegura que la imagen cubra todo el contenedor */
+        object-position: center center;
+        display: block;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* --------  650px -------- */
+@media only screen and (max-width: 650px) {
+    .title{
+        padding-top: 10%;;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    h2{
+        font-size: 4vw;
+    }
+}
+
+/* --------  510px -------- */
+@media only screen and (max-width: 600px) {
+    .nav{
+        justify-content: center;
+    }
+    .nav2{ 
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .atributo__list {
+        grid-template-columns: repeat(1,6fr);
+    }
+    h1{
+        font-size: 6vw;
+    }
+    h2{
+        font-size: 5vw;
+    }
+    .logo{
+        top:80px;
+        left: 4%;
+        width: 150px;
+        display:none;
+    }
+    .title{
+        margin-top: 150px
+    }
+}
+
+/* --------  420px -------- */
+@media only screen and (max-width: 420px) {
+    .nav__link {
+        font-size: 10px;
+    }
+    .logo {
+        width: 140px;
+    }
+    .nav__link:hover{
+        padding: 5px;
+        font-size: 10px;
+    }
+    .nav__des__list__item {
+        font-size: 10px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 10px;
+    }
+    .nav__des__list__item {
+        font-size: 12px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 12px;
+    }
+    .nav__des__list__item > a{
+        padding: 5px;
+    }
+}
+
+/* --------  390px -------- */
+@media only screen and (max-width: 390px) {
+    h1 {
+        font-size: 30px; 
+        line-height: 1.2; 
+        padding: 10px;
+        max-width: 90%; 
+        margin-top: 30px;
+    }
+}
+
+/* --------  380px -------- */
+@media only screen and (max-width: 380px) {
+    .nav__link {
+        font-size: 9px;
+    }
+    .logo {
+        width: 140px;
+        display: none;
+    }
+    .nav__link:hover{
+        padding: 5px;
+        font-size: 9px;
+    }
+    .nav__des__list__item {
+        font-size: 9px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 9px;
+    }
+    .nav__des__list__item > a{
+        padding: 5px;
+    }
+}
+
+/* --------  700px (galería vertical) -------- */
+@media (max-width: 700px) {
+    .maivu-vertical-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 8px;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .maivu-vertical-img {
+        max-width: 100%;
+        min-width: 0;
+        /* Elimina flex para que el grid funcione bien */
+        display: block;
+    }
+    .maivu-vertical-img img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        border-radius: 12px;
+        display: block;
+        background: #eee;
+    }
+}
+
+/* --- Fix bordes en .maivu-img4 entre 870px y 1040px --- */
+@media (max-width: 1040px) and (min-width: 870px) {
+    .maivu-img4 {
+        height: 260px !important;
+        min-height: 220px !important;
+        max-height: 320px !important;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        background: #133c2b;
+    }
+    .maivu-img4 picture,
+    .maivu-img4 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        display: block;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 14px 0 !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    border-bottom: 2px solid #fcc53a !important;
+    width: auto !important;
+    box-sizing: border-box !important;
+    order: 1;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav__link {
+    font-size: 14px !important;
+    padding: 5px 6px !important;
+  }
+  .nav__list {
+    gap: 10px !important; /* reduce el espacio entre botones */
+  }
+}
+
+@media (max-width: 460px) {
+  .nav__link {
+    font-size: 13px !important;
+    padding: 5px 6px !important;
+  }
+}
+
+@media (max-width: 440px) {
+  .nav__link {
+    font-size: 12px !important;
+    padding: 5px 6px !important;
+  }
+}
+@media (max-width: 417px) {
+  .nav__link {
+    font-size: 11px !important;
+    padding: 5px 6px !important;
+  }
+}
+
+@media (max-width: 397px) {
+  .nav__link {
+    font-size: 10px !important;
+    padding: 5px 6px !important;
+  }
+}
+@media (max-width: 377px) {
+  .nav__link {
+    font-size: 9px !important;
+    padding: 5px 6px !important;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .nav__link {
+    font-weight: 500 !important;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesppop.css">
+    <title>Los 40 - Primavera Pop 2024</title>
+    <link rel="icon" type="image/x-icon" href="/logos/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesppop.css">
+    <link rel="preload" href="/publi/PPOP/Mesa 1.mp4" as="video" fetchpriority="high">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html">
+                <img src="/logos/Mi logo7.webp"  alt="Gonzalo Ajenjo">
+            </a>
+        </div> 
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/English/English.html" class="nav__link">ENGLISH</a>
+                </li>
+                <li class="nav__item">
+                    <a href="" class="nav__link nav__des">TRABAJO</a>
+                    <ul class="nav__des__ul">
+                        <li class="nav__des__list__item"><a href="/publi/Publi.html">PUBLI</a></li>
+                        <li class="nav__des__list__item"><a href="/Disenografico/disenografico.html">DISEÑO GRÁFICO</a></li>                    </ul>
+                </li>
+                <li class="nav__item">
+                    <a href="/Sobre mi/Sobre mí.html"class="nav__link">SOBRE MÍ</a>
+                </li>
+                <li class="nav__item" >
+                    <a href="/Contacto/Contacto.html"class="nav__link">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="ppop">
+            <video class="ppop--gifs" autoplay muted loop playsinline>
+                <source src="/publi/PPOP/Mesa 1.mp4" type="video/mp4">
+            </video>
+            <img class="ppop--gifs"src="/publi/PPOP/Mesa2.webp" alt="gif2">
+            <video class="ppop--gifs" autoplay muted loop playsinline>
+                <source src="/publi/PPOP/Mesa 3.mp4" type="video/mp4">
+            </video>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/937984239?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Mesa 4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <video class="ppop--gifs" autoplay muted loop playsinline>
+                <source src="/publi/PPOP/Mesa 5.mp4" type="video/mp4">
+            </video>
+            <img class="ppop--gifs"src="/publi/PPOP/Mesa505.webp" loading="lazy" alt="gif5">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/938000440?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Mesa 6"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <video class="ppop--gifs" autoplay muted loop playsinline>
+                <source src="/publi/PPOP/Mesa 7.mp4" type="video/mp4">
+            </video>
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/938126446?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Mesa 8"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <img class="ppop--gifs"src="/publi/PPOP/Mesa9.webp" loading="lazy" alt="gif9">
+            <img class="ppop--gifs"src="/publi/PPOP/Mesa10.webp" loading="lazy" alt="gif8">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/938128027?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Mesa 10"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>    
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trabajoLink = document.querySelector(".nav__des");
+            const subMenu = document.querySelector(".nav__des__ul");
+    
+            trabajoLink.addEventListener("click", function (e) {
+                e.preventDefault(); // Evita que el enlace recargue la página
+                subMenu.classList.toggle("show");
+            });
+    
+            // Cierra el submenú si se hace clic fuera de él
+            document.addEventListener("click", function (e) {
+                if (!trabajoLink.contains(e.target) && !subMenu.contains(e.target)) {
+                    subMenu.classList.remove("show");
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

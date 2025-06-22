@@ -1,0 +1,236 @@
+body{
+    background-color: #F2F2F2;
+    font-family: Montserrat, Arial, sans-serif, Helvetica;
+    margin:0;
+
+}
+.logo{
+    height: 190px;
+    width: 190px;
+    object-fit: contain;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    height: auto;
+}
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.SWIFT{
+    margin: auto;
+    max-width: 80%;
+    margin-top: 3%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0;
+
+}
+.SWIFT img {
+    max-width: 100%; /* Adjust the value as needed */
+    height: auto;
+    display: block; /* Ensure proper sizing */
+    margin: 0 auto;
+}
+.nav{
+
+    border: none;
+    border-bottom: 2px solid #00359B ;
+    padding: 20px;
+    padding-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: end;
+
+}
+.nav__list{
+    margin: 0;
+    text-align: right;
+
+}
+.nav__item{
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.nav__link{
+    color: #00359B;
+    text-decoration: none;
+    border: 2px solid #00359B;
+    border-radius: 20px;
+    padding: 8px
+    
+}
+.nav__link:hover{
+    background-color:#00359B;
+    color: #F2F2F2;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav__des:hover + .nav__des__ul {
+    display: block; /* Muestra el submenú al hacer hover */
+}
+.nav__des__ul{
+    display: none;
+    position: fixed;
+    list-style: none;
+    text-decoration: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+.nav__des__ul:hover{
+    display: block;
+}
+.nav__des__list__item{
+    margin-top: 25px;
+}
+.nav__des__list__item > a{
+    color: #00359B;
+    text-decoration: none;
+    border: 2px solid #00359B;
+    border-radius: 20px;
+    padding: 8px;
+    background: #F2F2F2
+}
+
+.nav__des__list__item >a:hover {
+    background-color:#00359B;
+    color: #F2F2F2;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav__des__ul.show {
+    display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        padding: 10px; /* Reducir el padding */
+        margin-right: 20px; /* Reducir el margen derecho */
+        margin-left: 20px; /* Reducir el margen izquierdo */
+    }
+
+    .nav__list {
+        font-size: 14px; /* Reducir el tamaño de fuente */
+        text-align: center;
+        padding-left: 0px;
+    }
+
+    .nav__item {
+        padding: 5px; /* Reducir el padding */
+    }
+
+    .nav__link {
+        padding: 5px; /* Reducir el padding */
+        font-size: 12px; /* Reducir el tamaño de fuente */
+    }
+    .title {
+        position: relative; /* Hacer que la posición sea relativa para el título */
+    }
+
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 0px; /* Ajustar la posición vertical del logo */
+        max-width: 60px; /* Tamaño del logo para pantallas más pequeñas */
+    }
+    .nav__link:hover{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .nav__des__list__item {
+        font-size: 12px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 12px;
+    }
+    .nav__des__list__item > a{
+        padding: 6px;
+    }
+    .nav__des__list__item{
+        margin-top: 18px;
+    }
+}
+@media only screen and (max-width: 1700px) {
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 0px; /* Ajustar la posición vertical del logo */
+        width: 150px; /* Tamaño del logo para pantallas más pequeñas */
+    }
+    
+}
+@media only screen and (max-width: 1520px) {
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 0px; /* Ajustar la posición vertical del logo */
+        width: 120px; /* Tamaño del logo para pantallas más pequeñas */
+    }
+    .ppop{
+        border: 0.4rem solid black ;
+    
+    }
+}
+@media only screen and (max-width: 974px) {
+    .logo {
+        position: absolute; /* Hacer que la posición sea absoluta para el logo */
+        top: 0px; /* Ajustar la posición vertical del logo */
+        width: 110px; /* Tamaño del logo para pantallas más pequeñas */
+    }
+    .ppop{
+        border: 0.3rem solid black ;
+    
+    }
+}
+@media only screen and (max-width: 510px) {
+    .logo {
+    display: none;
+    }
+    .nav{
+        justify-content: center;
+    }
+    .nav2{
+        justify-content: center;
+
+    }
+    .ppop{
+        border: 0.2rem solid black ;
+    
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .nav__link {
+        font-size: 9px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+    .nav__link:hover{
+    padding: 5px;
+    font-size: 9px;
+    }
+    .nav__des__list__item {
+        font-size: 9px;
+    }
+    .nav__des__list__item >a:hover {
+        font-size: 9px;
+    }
+    .nav__des__list__item > a{
+        padding: 5px;
+    }
+}
+
+
+@media (max-width: 600px) {
+  .nav__link {
+    font-weight: 500 !important;
+  }
+}
